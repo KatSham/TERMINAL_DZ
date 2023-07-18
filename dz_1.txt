@@ -1,0 +1,136 @@
+1) Посмотреть где я 
+$ pwd
+Результат
+/c/Users/Kate
+2) Создать папку
+$ mkdir dz_1 
+3) Зайти в папку
+$ cd dz_1
+4) Создать 3 папки
+$ mkdir d1 d2 d3
+5) Зайти в любую папку
+$ cd r1
+6) Создать 5 файлов (3 txt, 2 json)
+$ touch name.txt surname.txt age.txt mounth.json year.json
+7) Создать 3 папки
+$ mkdir k1 k2 k3
+8) Вывести список содержимого папки
+$ ls -la
+Результат
+total 4
+drwxr-xr-x 1 Kate 197121 0 Jun 13 16:39 ./
+drwxr-xr-x 1 Kate 197121 0 Jun 13 16:18 ../
+-rw-r--r-- 1 Kate 197121 0 Jun 13 16:33 age.txt
+drwxr-xr-x 1 Kate 197121 0 Jun 13 16:39 k1/
+drwxr-xr-x 1 Kate 197121 0 Jun 13 16:39 k2/
+drwxr-xr-x 1 Kate 197121 0 Jun 13 16:39 k3/
+-rw-r--r-- 1 Kate 197121 0 Jun 13 16:33 mounth.json
+-rw-r--r-- 1 Kate 197121 0 Jun 13 16:33 name.txt
+-rw-r--r-- 1 Kate 197121 0 Jun 13 16:33 surname.txt
+-rw-r--r-- 1 Kate 197121 0 Jun 13 16:33 year.json
+9) Открыть любой txt файл
+$ cat age.txt
+10) Написать туда что-нибудь, любой текст
+$ cat >> age.txt
+1) 1 years
+2) 5 years
+3) 10 years
+4) 15 years
+5) 20 years
+6) 25 years
+11) Сохранить и выйти
+Ctr+C
+12) Выйти из папки на уровень выше
+$ cd ..
+13) Переместить любые 2 файла, которые вы создали в любую другую папку
+$ mv r1/name.txt r1/surname.txt r2
+14) Скопировать любые 2 файла, которые вы создали, в любую другую папку
+$ cp r2/name.txt r2/surname.txt r3
+15) Найти файл по имени
+$ find -name name.txt
+Результат
+./r2/name.txt
+./r3/name.txt
+16) Просмотреть содержимое в реальном времени (команда grep)
+ grep 1 r1/age.txt
+Результат
+1) 1 years
+3) 10 years
+4) 15 years
+10) 35 years
+11) 40 years
+12) 45 years
+13) 50 years
+14) 55 years
+15) 60 years
+16) 65 years
+17) Вывести несколько первых строк из текстового файла
+$ head -3 r1/age.txt
+Результат
+1) 1 years
+2) 5 years
+3) 10 years
+18) Вывести несколько последних строк из текстового файла
+$ tail -5 r1/age.txt
+Резудьтат
+12) 45 years
+13) 50 years
+14) 55 years
+15) 60 years
+16) 65 years
+19) Просмотреть содержимое длинного файла (команда less)
+$ less r3/name.txt
+20) Вывести дату и время
+$ date
+Результат
+Tue Jun 13 21:17:43 GST 2023
+
+Задание *
+1) Отправить http запрос на сервер
+$ curl http://162.55.220.72:5006/terminal-hw-request
+Результат
+{
+  "Intro": "Hello!! This is your the first response from server",
+  "Tasks": {
+    "Task_1": "Send the next URL in terminal: http://162.55.220.72:5005/get_meth
+od?name=(set_your_String)&age=(set_your_number)",
+    "result": [
+      "Your_String",
+      "Your_number"
+    ]
+  }
+}
+curl http://162.55.220.72:5005/get_method?name=Kate\&age=33
+Результат
+[
+  "Kate",
+  "33"
+]
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+Пишу шаги воспроизведеия
+cd fol
+mkdir ty ti to
+cd ty
+touch my.txt you.txt his.txt her.json it.json
+mkdir ry ra ri
+ls -la
+cd ..
+mv ty/my.txt ty/her.json ti
+Сохраняю с разрешением .sh
+В терминале прописываю команду
+$ chmod +x script.sh
+Запускаю скрипт script.sh двойным кликом из проводника
+Либо через терминал командой
+$ bash script.sh
+Результат
+total 4
+drwxr-xr-x 1 Kate 197121 0 Jun 14 12:12 .
+drwxr-xr-x 1 Kate 197121 0 Jun 14 12:12 ..
+-rw-r--r-- 1 Kate 197121 0 Jun 14 12:12 her.json
+-rw-r--r-- 1 Kate 197121 0 Jun 14 12:12 his.txt
+-rw-r--r-- 1 Kate 197121 0 Jun 14 12:12 it.json
+-rw-r--r-- 1 Kate 197121 0 Jun 14 12:12 my.txt
+drwxr-xr-x 1 Kate 197121 0 Jun 14 12:12 ra
+drwxr-xr-x 1 Kate 197121 0 Jun 14 12:12 ri
+drwxr-xr-x 1 Kate 197121 0 Jun 14 12:12 ry
+-rw-r--r-- 1 Kate 197121 0 Jun 14 12:12 you.txt
